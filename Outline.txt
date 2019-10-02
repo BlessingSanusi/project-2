@@ -1,0 +1,4 @@
+Project 2
+By Blessing, Josh, and Matt.
+
+Tenatively, a message board type app geared towards students and educators.
