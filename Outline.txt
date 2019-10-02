@@ -8,6 +8,7 @@ Different topics correspond to different 'rooms' and users can input questions f
 Database will be used to store questions and user data as well as for authentication of administrators.
 All CRUD operations will be viable(making a post, editing a post, deleting your post, seeing other users questions)
 Authentication will be done serverside via administrator accounts and checking user-id against data saved to the questions.
+Users have their own account page and can direct message other users.
 
 
 
