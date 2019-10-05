@@ -33,8 +33,24 @@
           <a class="dropdown-item" href="#">Log out</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Login</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Login
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <form>
+            <div class="form-group">
+              <label>Username</label>
+              <input class="form-control" placeholder="Enter Username">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="dropdown-divider"></div>
+            <button type="submit" class="btn btn-primary">Log In</button>
+          </form>
+        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Sign Up</a>
