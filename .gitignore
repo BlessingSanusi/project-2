@@ -47,3 +47,5 @@ typings/
 .env
 # next.js build output
 .next
+
+config.json
