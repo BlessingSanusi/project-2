@@ -41,7 +41,6 @@ module.exports = function(app) {
     });
   });
 
-
   // Create a new example
   app.post("/api/comment", function(req, res) {
     db.Comment.create(req.body).then(function(dbComment) {
@@ -51,7 +50,9 @@ module.exports = function(app) {
 
   // Delete an example by id
   app.delete("/api/comment/:id", function(req, res) {
-    db.Comment.destroy({ where: { id: req.params.id } }).then(function(dbComment) {
+    db.Comment.destroy({ where: { id: req.params.id } }).then(function(
+      dbComment
+    ) {
       res.json(dbComment);
     });
   });
