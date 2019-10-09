@@ -1,0 +1,12 @@
+{{#each Comment}}
+<a href="post/{{this.id}}" class="category" author="{{this.UserId}}">
+    <div class="card-body mb-2">
+        <div class="post-subtitle nav-item" scope="col">
+            <a class="nav-link">
+                {{this.body}}
+            </a>
+        </div>
+    </div>
+</a>
+
+{{/each}}
