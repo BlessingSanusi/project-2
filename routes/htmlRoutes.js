@@ -4,13 +4,17 @@
 const path = require("path");
 var db = require("../models");
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Load index page
-  app.get("/", function(req, res) {
+  app.get("/", function (req, res) {
+    //dB query response
+    //Response formatting {}
+    //var formattingObj = {key1: database.whatever, key2: db.otherstuff}
+    // res.render("../views/index.handlebars", formattingObj);
     res.render("../views/index.handlebars");
   });
-  
-  app.get("/about", function(req, res) {
+
+  app.get("/about", function (req, res) {
     res.render("../views/about.handlebars");
   });
 
@@ -24,7 +28,7 @@ module.exports = function(app) {
   // });
 
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
+  app.get("*", function (req, res) {
     res.render("404");
   });
 };

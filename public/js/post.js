@@ -1,45 +1,47 @@
 // create post
 // When the create button is clicked,grab the input val
 $(document).ready(function () {
+    console.log("POST FILE READY!")
     $(".Category").on("click", function () {
         var CategoryID = $(this).attr("id");
-        $("#createpost").val(CategoryID);
+        $("submitPost").val(CategoryID);
     });
-    $("#createpost").on("click", function () {
-        var titleInput = $("#post-title");
+    $("#submitPost").on("click", function (e) {
+        e.preventDefault()
+        var titleInput = $("#titleInput");
+        console.log(titleInput)
         var bodyInput = $("#postBody");
-        var CategoryID = $("#Category-createPost").val();
-        // var postedby = $("#createpost").attr("byid");
+        console.log(bodyInput)
+        var CategoryID = $("#Category-post");
+        console.log(CategoryID)
+        var username = $("#username");
+        console.log(username)
+
 
         var postData = {
             title: titleInput.val().trim(),
             body: bodyInput.val().trim(),
-            CategoryID: CategoryID
+            username: username.val().trim(),
+            CategoryID: CategoryID.val()
         };
 
         console.log(postData);
         $("#createpost").val("");
-        createPost(postData.title, postData.body, postData.CategoryID);
+        createPost(postData);
         //empty the fields
         titleInput.val("");
         bodyInput.val("");
     });
 
     // Does a post to the create route. If successful, we are redirected to the main page
-    function createPost(title, body, CategoryID) {
+    function createPost(postData) {
         $.post("/api/create", {
-            title: title,
-            body: body,
-            id: CategoryID
-        }).then(function () {
-            window.location.reload();
-        });
+            title: postData.title,
+            body: postData.body,
+            CategoryId: postData.CategoryID,
+            UserId: postData.username
+        })
     }
 
-    // Delete post
-    $(".delete-post").on("click", function () {
-        $.get("/api/post/delete/" + $(this).attr("data-id")).then(function () {
-            window.location.reload();
-        });
-    });
+
 });
