@@ -1,35 +1,74 @@
-<div class="card" id="form">
+{{!-- <div class="card" id="form">
     <div class="card-header">
-        <h3>Create a Post</h3>
+        <h5>Create a Post</h5>
     </div>
     <div class="card-body">
         <form>
             <div class="form-group">
                 <label for="Title">Title of Post</label>
                 <br>
-                <input type="text" placeholder="Title">
+                <input type="text" id="titleInput" placeholder="Title">
             </div>
             <div class="form-group">
                 <label for="Post">Post Content</label>
                 <br>
-                <input type="text" placeholder="Content">
+                <input type="text" id="postBody" placeholder="Content">
             </div>
             <div class="form-group">
                 <label for="Author">Author</label>
                 <br>
-                <input type="text" placeholder="Author">
+                <input type="text" id="username" placeholder="Author">
             </div>
             <div class="form-group">
                 <label for="Category">Category</label>
                 <br>
-                <select name="Category">
-                    <option>Category 1</option>
-                    <option>Category 2</option>
-                    <option>Category 3</option>
+                <select name="Category" id="Category-post">
+                    <option>Sport</option>
+                    <option>Gaming</option>
+                    <option>Food</option>
+                    <option>Programming</option>
+                    <option>General</option>
                 </select>
             </div>
             <hr>
-            <button class="btn btn-primary">Post</button>
+            <button class="btn btn-primary" id="submitPost">Post</button>
         </form>
     </div>
+</div> --}}
+{{!-- <div class="container">
+    <button type="button" class="btn btn-primary mt-10">Start New Discussion</button>
+</div> --}}
+<div></div>
+<br><br>
+<div class="container">
+    <button type="button" class="btn btn-primary mt-10"><i class="fas fa-plus"></i> Start New Discussion</button>
+</div>
+<br>
+<br>
+
+<div class="container">
+
+    <h5>Category</h5>
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Sport
+            <span class="badge badge-primary badge-pill">14</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Gaming
+            <span class="badge badge-primary badge-pill">2</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Programming
+            <span class="badge badge-primary badge-pill">1</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Food
+            <span class="badge badge-primary badge-pill">1</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            General
+            <span class="badge badge-primary badge-pill">1</span>
+        </li>
+    </ul>
 </div>

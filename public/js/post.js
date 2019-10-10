@@ -7,6 +7,7 @@ $(document).ready(function () {
         $("submitPost").val(CategoryID);
     });
     $("#submitPost").on("click", function (e) {
+        console.log("POST FILE READY!")
         e.preventDefault()
         var titleInput = $("#titleInput");
         console.log(titleInput)
@@ -26,7 +27,8 @@ $(document).ready(function () {
         };
 
         console.log(postData);
-        $("#createpost").val("");
+
+        $("#submitPost").val("");
         createPost(postData);
         //empty the fields
         titleInput.val("");

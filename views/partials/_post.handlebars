@@ -1,21 +1,68 @@
-<div class="card" id="post">
-    <div class="card-header">
-        <h3 id="title"></h3>
-    </div>
+<h4 class="text-center">Discussions</h4>
+
+
+<div class="card">
     <div class="card-body">
-        <div>
-            <p id="body"></p>
-        </div>
-        <div>
-            <p id="username"></p>
-        </div>
-        <div>
-            <p id="postName"></p>
-        </div>
+
+        <h6 class="card-subtitle mb-2 text-muted">Posted: John Adams</h6>
+        <a href="/post" class="forum">
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h5>
+        </a>
+
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
         <hr>
-        <div>
-            <a class="button" id="likes">❤️</a>
-            <a class="button" id="comments">💬</a>
-        </div>
+        <a href="#" class="card-link category btn btn-outline-warning">Sport</a>
+        <a href="#" class="card-link likes"><i class="far fa-heart"> 23</i></a>
+        <a href="#" class="card-link comments"><i class="far fa-comment-alt"> 12</i></a>
     </div>
 </div>
+<div class="card mt-5 mb-5">
+    <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">Posted: John Adams</h6>
+        <a href="/post" class="forum">
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h5>
+        </a>
+
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+        <hr>
+        <a href="#" class="card-link category btn btn-outline-warning">Sport</a>
+        <a href="#" class="card-link likes"><i class="far fa-heart"> 23</i></a>
+        <a href="#" class="card-link comments"><i class="far fa-comment-alt"> 12</i></a>
+    </div>
+</div>
+<div class="card mb-5">
+    <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">Posted: John Adams</h6>
+        <a href="/post" class="forum">
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h5>
+        </a>
+
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+        <hr>
+        <a href="#" class="card-link category btn btn-outline-warning">Sport</a>
+        <a href="#" class="card-link likes"><i class="far fa-heart"> 23</i></a>
+        <a href="#" class="card-link comments"><i class="far fa-comment-alt"> 12</i></a>
+
+    </div>
+</div>
+
+{{#each post}}
+<div class="card">
+    <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">{{this.UserId}}</h6>
+        <a href="/post/{{this.id}}" class="forum">
+            <h5 class="card-title"> {{this.title}}</h5>
+        </a>
+
+        <h6 class="card-subtitle mb-2 text-muted">{{this.CategoryId}}</h6>
+        <p class="card-text">{{this.body}}</p>
+        <hr>
+        <a href="#" class="card-link likes"><i class="far fa-heart"> 23</i></a>
+        <a href="#" class="card-link comments"><i class="far fa-comment-alt"> 12</i></a>
+    </div>
+</div>
+
+{{/each}}

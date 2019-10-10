@@ -5,3 +5,8 @@
 .card {
   padding-left: 0%;
 }
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
