@@ -93,6 +93,16 @@ var handleDeleteBtnClick = function() {
     refreshExamples();
   });
 };
+$(".loginSubmit").on("click", function(){
+  var userCheck = {
+      username : $(".userLogin").val().trim(),
+      password : $(".exampleInputPassword1").val(),
+      joinDate : new Date.getUTCDate()
+  };
+  $.post("/api/login", userCheck).then(function() {
+      console.log(userCheck);
+  })
+})
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
