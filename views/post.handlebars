@@ -1,0 +1,107 @@
+{{> _navbar}}
+<div class="container">
+    <div class="card mt-5 mb-5">
+        <div class="card-body">
+
+            <h6 class="card-subtitle mb-2 text-muted">John Adams</h6>
+            <a href="/post" class="forum">
+                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h5>
+            </a>
+
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <hr>
+            <a href="#" class="card-link category btn btn-outline-warning">Sport</a>
+            <a href="#" class="card-link likes"><i class="far fa-heart"> 23</i></a>
+            <a href="#" class="card-link comments"><i class="far fa-comment-alt"> 12</i></a>
+        </div>
+    </div>
+
+    <div>
+        <ul>
+
+            <li>
+                <div class="card">
+                    <div class="card-body mb-2">
+                        <h6 class="card-subtitle mb-2 text-muted">Comment by: Sarah Doe</h6>
+                        <div class="post-subtitle nav-item" scope="col">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                        <hr>
+
+                        <a href="#" class="card-link likes"><i class="far fa-heart"></i></a>
+                        <a href="#" class="card-link comments"><i class="far fa-comment-alt"></i></a>
+                    </div>
+
+                </div>
+
+            </li>
+            <li>
+                <div class="card mt-5">
+                    <div class="card-body mb-2 ">
+                        <h6 class="card-subtitle mb-2 text-muted">Comment by: Sarah Doe</h6>
+                        <div class="post-subtitle nav-item" scope="col">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                        <hr>
+
+                        <a href="#" class="card-link likes"><i class="far fa-heart"></i></a>
+                        <a href="#" class="card-link comments"><i class="far fa-comment-alt"></i></a>
+                    </div>
+
+                </div>
+
+            </li>
+
+    </div>
+
+</div>
+
+
+
+{{!-- {{#each post}}
+
+<div class="forum" id="{{this.id}}">
+    <div class="card-body">
+        <a href="/post/{{this.id}}" class="forum">
+            <h5 class="card-title"> {{this.title}}</h5>
+        </a>
+
+        <h6 class="card-subtitle mb-2 text-muted">{{this.CategoryId}}</h6>
+        <p class="card-text">{{this.body}}</p>
+        <hr>
+        <a href="#" class="card-link likes"><i class="far fa-heart"> 23</i></a>
+        <a href="#" class="card-link comments"><i class="far fa-comment-alt"> 12</i></a>
+    </div>
+    <ul>
+        {{#each Comment}}
+        <li>
+            <div class="card-body mb-2">
+                <div class="post-subtitle nav-item" scope="col">
+
+                    {{this.body}}
+
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+
+{{/each}} --}}
+
+<div class="container">
+    <div class="form-group">
+        <textarea class="form-control" id="comment" placeholder="Post your comment" rows="3"
+            spellcheck="false"></textarea>
+    </div>
+    <button class="btn btn-success">Post</button>
+</div>
