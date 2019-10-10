@@ -1,9 +1,11 @@
-
-
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "052595my",
+=======
+    "password": "Teetop123!",
+>>>>>>> 582eea7d23f3e651484ed569cec551193fa11bee
     "database": "recipedb",
     "host": "localhost",
     "dialect": "mysql"
