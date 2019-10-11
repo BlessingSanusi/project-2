@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Teetop123!",
+    "password": "password",
     "database": "recipedb",
     "host": "localhost",
     "dialect": "mysql"
