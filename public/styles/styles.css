@@ -2,6 +2,30 @@
   line-height: 2.5;
 }
 
-.card {
-  padding-left: 0%;
+#form {
+  margin-left: 3%;
 }
+
+#post {
+  margin-right: 2%;
+}
+
+#nav {
+  margin-bottom: 3%;
+}
+
+#login {
+  margin: 2%;
+  padding: 2%;
+}
+
+#login-btn {
+  padding-left: 3%;
+  margin-left: 3%;
+}
+
+#CreateAcc-btn {
+  padding-left: 3%;
+  margin-left: 3%;
+}
+
