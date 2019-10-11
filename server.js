@@ -6,20 +6,18 @@ var db = require("./models");
 
 var app = express();
 var PORT = process.env.PORT || 3000;
-
+// Middleware
 var passport = require("passport");
 var session = require('express-session');
 var bodyParser = require('body-parser');
-// Middleware
-var session = require('express-session')
 
 // For Passport
 app.use(express.static("public"));
-app.use(session({
-  secret: 'recipedb',
-  resave: true,
-  saveUninitialized: true
-})); // session secret
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
+app.use(session({ secret: 'recipedb',resave: true, saveUninitialized:true})); // session secret
 app.use(passport.initialize());
 app.use(bodyParser.urlencoded({
   extended: false

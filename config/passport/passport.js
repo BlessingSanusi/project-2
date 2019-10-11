@@ -32,19 +32,25 @@ module.exports = function(passport, user){
             }).then(function(user){
                 if(user){
                     return done(null, false, {
-                        message: "That email is already taken"
+                        message: "That username is already taken"
                     });
                 } else{
                     var userPassword = generateHash(password);
+                    var utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
                     var data = {
                         username: username,
-                        password: userPassword
+                        password: userPassword,
+                        joinDate: utc,
                     };
-                    User.create(data).then(function(newUser, created){
+                    console.log(data);
+                    User.create(data).then(function(newUser){
+                        console.log(newUser);
                         if(!newUser){
+                            console.log("signup failed");
                             return done(null, false);
                         }
                         if(newUser){
+                            console.log("signup success");
                             return done(null, newUser);
                         }
                     });
