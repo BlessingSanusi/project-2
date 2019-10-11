@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Get references to page elements
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
@@ -108,7 +107,6 @@ $(".loginSubmit").on("click", function(){
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
-=======
 {
   /* <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true">
@@ -141,4 +139,3 @@ $exampleList.on("click", ".delete", handleDeleteBtnClick);
     </div>
   </div> */
 }
->>>>>>> 582eea7d23f3e651484ed569cec551193fa11bee

@@ -7,18 +7,9 @@ var db = require("./models");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
-<<<<<<< HEAD
 var passport = require("passport");
 var session  = require('express-session');
 var bodyParser = require('body-parser');
-=======
-// Middleware
-app.use(express.urlencoded({
-  extended: false
-}));
-app.use(express.json());
-app.use(express.static("public"));
->>>>>>> 582eea7d23f3e651484ed569cec551193fa11bee
 
 // Middleware
 var session    = require('express-session')
