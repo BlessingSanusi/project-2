@@ -31,6 +31,10 @@ module.exports = function (app) {
     // res.render("../views/index.handlebars");
   });
 
+  app.get("/register", function (req, res) {
+    res.render("../views/register.handlebars");
+  })
+
   app.get("/post", function (req, res) {
     res.render("../views/post.handlebars");
   });
