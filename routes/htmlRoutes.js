@@ -7,6 +7,7 @@ var db = require("../models");
 module.exports = function (app) {
   // Load index page
   app.get("/", function (req, res) {
+
     res.render("../views/index.handlebars");
   });
 
@@ -27,7 +28,7 @@ module.exports = function (app) {
     //Response formatting {}
     //var formattingObj = {key1: database.whatever, key2: db.otherstuff}
     // res.render("../views/index.handlebars", formattingObj);
-    res.render("../views/index.handlebars");
+    // res.render("../views/index.handlebars");
   });
 
   app.get("/post", function (req, res) {
