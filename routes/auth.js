@@ -3,15 +3,19 @@ var authController = require("../controllers/authController.js");
 module.exports = function(app, passport){
     app.get("/api/signup", authController.signup);
     app.get("/api/signin", authController.signin);
-    app.get("/api/dashboard", isLoggedIn, authController.dashboard);
     app.get("/api/logout", authController.logout);
     app.post("/api/signup", passport.authenticate("local-signup", {
-        successRedirect: "/dashboard",
-        failureRedirect: "/signup"
+        successRedirect: "/",
+        failureRedirect: "/"
+      }, function(req, res){
+          console.log("Auth.js signup called");
+          // db.User.create(req.body).then(function(dbU){
+          //     res.json(dbU);
+          // });
       }));
     app.post("/api/signin", passport.authenticate("local-signin", {
-        successRedirect: "/dashboard",
-        failureRedirect: "/signin"
+        successRedirect: "/",
+        failureRedirect: "/"
     }));
       app.post("/api/login", function(req, res){
         var userCheck = req.params;
