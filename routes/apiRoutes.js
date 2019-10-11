@@ -62,7 +62,10 @@ module.exports = function (app) {
   // Create a new example
   app.post("/api/comment", function (req, res) {
     db.Comment.create(req.body).then(function (dbComment) {
+      console.log(dbComment)
       res.json(dbComment);
+    }).catch((err) => {
+      console.log(err)
     });
   });
 
