@@ -20,7 +20,7 @@ $(document).ready(function () {
     // Does a post to the create route. If successful, we are redirected to the main page
     function createComment(commentData) {
         $.post("/api/comment", commentData).then(function () {
-            window.location.reload();
+            // window.location.reload();
             // If there's an error, log the error
         });
     }
