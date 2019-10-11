@@ -1,10 +1,10 @@
 var db = require("../models");
 var authController = require("../controllers/authController.js");
 module.exports = function(app, passport){
-    app.get("/signup", authController.signup);
-    app.get("/signin", authController.signin);
-    app.get("/dashboard", isLoggedIn, authController.dashboard);
-    app.get("/logout", authController.logout);
+    app.get("/api/signup", authController.signup);
+    app.get("/api/signin", authController.signin);
+    app.get("/api/dashboard", isLoggedIn, authController.dashboard);
+    app.get("/api/logout", authController.logout);
     app.post("/api/signup", passport.authenticate("local-signup", {
         successRedirect: "/dashboard",
         failureRedirect: "/signup"

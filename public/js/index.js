@@ -1,4 +1,5 @@
 // Get references to page elements
+
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
@@ -93,16 +94,23 @@ var handleDeleteBtnClick = function() {
     refreshExamples();
   });
 };
-$(".loginSubmit").on("click", function(){
+$("#loginSubmit").on("click", function(event){
+
+  event.preventDefault();
+  var today = new Date;
   var userCheck = {
-      username : $(".userLogin").val().trim(),
-      password : $(".exampleInputPassword1").val(),
-      joinDate : new Date.getUTCDate()
+      username : $("#userLogin").val().trim(),
+      password : $("#userPassword").val().trim(),
+      joinDate : today.getUTCDate()
   };
-  $.post("/api/login", userCheck).then(function() {
+if((userCheck.username) && (userCheck.password)){
+  $.post("/api/signin", userCheck).then(function() {
       console.log(userCheck);
-  })
+  });
+  }
+  
 })
+
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);

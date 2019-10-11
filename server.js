@@ -8,13 +8,13 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 var passport = require("passport");
-var session  = require('express-session');
+var session = require('express-session');
 var bodyParser = require('body-parser');
-
 // Middleware
-var session    = require('express-session')
+var session = require('express-session')
 var bodyParser = require('body-parser')
 // For Passport
+app.use(express.static("public"));
 app.use(session({ secret: 'recipedb',resave: true, saveUninitialized:true})); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
@@ -34,7 +34,7 @@ app.set("view engine", "handlebars");
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 require("./routes/auth")(app, passport);
-require("./config/passport/passport.js")(passport, db.user);
+require("./config/passport/passport.js")(passport, db.User);
 
 var syncOptions = {
   force: false

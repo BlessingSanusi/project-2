@@ -1,4 +1,5 @@
-var bCrypt = require("bcrypt-nodejs");
+var bCrypt = require("bcrypt");
+
 module.exports = function(passport, user){
     var User = user;
     var LocalStrategy = require("passport-local").Strategy;
@@ -21,7 +22,7 @@ module.exports = function(passport, user){
             passReqToCallback: true
         },
         function(req, username, password, done){
-            var generateHash = function(username) {
+            var generateHash = function(password) {
                 return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
             };
             User.findOne({
