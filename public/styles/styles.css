@@ -33,3 +33,7 @@ li {
   text-decoration: none;
   list-style: none;
 }
+
+#navbarSupportedContent {
+  margin-right: 5%;
+}
