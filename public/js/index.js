@@ -1,14 +1,13 @@
-$("#loginSubmit").on("click", function(event){
-
+$("#loginSubmit").on("click", function (event) {
   event.preventDefault();
   var userCheck = {
       username : $("#userLogin").val().trim(),
       password : $("#userPassword").val().trim(),
   };
-if((userCheck.username) && (userCheck.password)){
-  $.post("/api/signin", userCheck).then(function() {
+  if ((userCheck.username) && (userCheck.password)) {
+    $.post("/api/signin", userCheck).then(function () {
       console.log(userCheck);
-  });
+    });
   }
   
 });

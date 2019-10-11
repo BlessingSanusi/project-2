@@ -4,15 +4,14 @@ module.exports = function(app, passport){
     app.get("/api/signup", authController.signup);
     app.get("/api/signin", authController.signin);
     app.get("/api/logout", authController.logout);
-    app.post("/api/signup", passport.authenticate("local-signup", {
-        successRedirect: "/",
-        failureRedirect: "/"
-      }, function(req, res){
-          console.log("Auth.js signup called");
-          // db.User.create(req.body).then(function(dbU){
-          //     res.json(dbU);
-          // });
-      }));
+    app.post("/api/signup", function(req, res){
+          console.log(req.body);
+
+          db.User.create(req.body).then(function(dbU){
+            console.log(dbU);
+              res.json(dbU);
+          });
+      });
     app.post("/api/signin", passport.authenticate("local-signin", {
         successRedirect: "/",
         failureRedirect: "/"

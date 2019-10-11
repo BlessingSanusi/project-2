@@ -19,6 +19,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(session({ secret: 'recipedb',resave: true, saveUninitialized:true})); // session secret
 app.use(passport.initialize());
+app.use(bodyParser.urlencoded({
+  extended: false
+}))
 app.use(passport.session()); // persistent login sessions
 // var env = require("dotenv");
 // env.load(); getting an error about env.load();
@@ -57,7 +60,7 @@ db.sequelize.sync(syncOptions).then(function () {
       PORT
     );
   });
-}).catch(function(err){
+}).catch(function (err) {
   console.log(err, "Something went wrong with the database update!");
 });
 
