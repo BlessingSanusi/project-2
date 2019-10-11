@@ -1,39 +1,58 @@
-{{!-- <div class="card" id="form">
+<div class="card" id="form" type="button" data-toggle="modal" tabindex="1" data-target="#exampleModalScrollable">
     <div class="card-header">
         <h5>Create a Post</h5>
     </div>
     <div class="card-body">
-        <form>
-            <div class="form-group">
-                <label for="Title">Title of Post</label>
-                <br>
-                <input type="text" id="titleInput" placeholder="Title">
-            </div>
-            <div class="form-group">
-                <label for="Post">Post Content</label>
-                <br>
-                <input type="text" id="postBody" placeholder="Content">
-            </div>
-            <div class="form-group">
-                <label for="Author">Author</label>
-                <br>
-                <input type="text" id="username" placeholder="Author">
-            </div>
-            <div class="form-group">
-                <label for="Category">Category</label>
-                <br>
-                <select name="Category" id="Category-post">
-                    <option>Sport</option>
-                    <option>Gaming</option>
-                    <option>Food</option>
-                    <option>Programming</option>
-                    <option>General</option>
-                </select>
-            </div>
-            <hr>
-            <button class="btn btn-primary" id="submitPost">Post</button>
-        </form>
+        <div>
+            <p>Create a post and choose a category to post it under!</p>
+        </div>
     </div>
+</div>
+<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalScrollableTitle" aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalScrollableTitle">Create Post</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="Title">Title of Post</label>
+                        <br>
+                        <input type="text" placeholder="Title" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="Post">Post Content</label>
+                        <br>
+                        <textarea class="form-control" id="message-text" placeholder="Content"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="Author">Author</label>
+                        <br>
+                        <input type="text" placeholder="Author" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="Category">Category</label>
+                        <br>
+                        <select name="Category">
+                            <option>Category 1</option>
+                            <option>Category 2</option>
+                            <option>Category 3</option>
+                        </select>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal" type="button">Post</button>
+            </div>
+        </div>
+    </div>
+<<<<<<< HEAD
 </div> --}}
 {{!-- <div class="container">
     <button type="button" class="btn btn-primary mt-10">Start New Discussion</button>
@@ -73,3 +92,6 @@
         </li>
     </ul>
 </div>
+=======
+</div> 
+>>>>>>> 3bc342233f596dd43783719022f570bf9ab5330c
