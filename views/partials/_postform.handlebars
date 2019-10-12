@@ -23,33 +23,33 @@
                     <div class="form-group">
                         <label for="Title">Title of Post</label>
                         <br>
-                        <input type="text" placeholder="Title" class="form-control">
+                        <input type="text" placeholder="Title" class="form-control" id="titleInput">
                     </div>
                     <div class="form-group">
                         <label for="Post">Post Content</label>
                         <br>
-                        <textarea class="form-control" id="message-text" placeholder="Content"></textarea>
+                        <textarea class="form-control" id="postBody" placeholder="Content"></textarea>
                     </div>
-                    <div class="form-group">
+                    {{!-- <div class="form-group">
                         <label for="Author">Author</label>
                         <br>
                         <input type="text" placeholder="Author" class="form-control">
-                    </div>
+                    </div> --}}
                     <div class="form-group">
                         <label for="Category">Category</label>
                         <br>
-                        <select name="Category">
-                            <option>Category 1</option>
-                            <option>Category 2</option>
-                            <option>Category 3</option>
+                        <select name="Category" id="Category-post">
+                            <option>Sport</option>
+                            <option>Gaming</option>
+                            <option>Food</option>
                         </select>
                     </div>
 
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" data-dismiss="modal" type="button">Post</button>
+                <button class="btn btn-primary" data-dismiss="modal" type="button" id="submitPost">Post</button>
             </div>
         </div>
     </div>
-</div> 
+</div>

@@ -15,15 +15,15 @@ $(document).ready(function () {
         console.log(bodyInput)
         var CategoryID = $("#Category-post");
         console.log(CategoryID)
-        var username = $("#username");
-        console.log(username)
+        // var username = $("#username");
+        // console.log(username)
 
 
         var postData = {
             title: titleInput.val().trim(),
             body: bodyInput.val().trim(),
-            username: username.val().trim(),
-            CategoryID: CategoryID.val()
+            // username: username.val().trim(),
+            // CategoryID: CategoryID.val()
         };
 
         console.log(postData);
@@ -41,9 +41,7 @@ $(document).ready(function () {
             title: postData.title,
             body: postData.body,
             CategoryId: postData.CategoryID,
-            UserId: postData.username
+            // UserId: postData.username
         })
     }
-
-
 });

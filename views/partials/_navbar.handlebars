@@ -26,13 +26,13 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
-          Acount
+          Account
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Post</a>
           <a class="dropdown-item" href="#">Likes</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Log out</a>
+          <a class="dropdown-item" href="#" id="logoutBtn">Log out</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -43,13 +43,13 @@
           <form>
             <div class="form-group" id="login">
               <label>Username</label>
-              <input class="form-control" placeholder="Enter Username" id="userLogin">
+              <input class="form-control" placeholder="Enter Username" id="userLogin" name="username">
             </div>
             <div class="form-group" id="login">
               <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" placeholder="Password" id="userPassword">
+              <input type="password" class="form-control" placeholder="Password" id="userPassword" name="password">
             </div>
-            <div class="dropdown-divider"></div>
+            <div class="dropdown-divider" id="login"></div>
             <button type="submit" class="btn btn-primary" id="loginSubmit">Log In</button>
           </form>
         </div>
@@ -60,16 +60,16 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <form>
-            <div class="form-group" id="login">
+            <div class="form-group" id="signup">
               <label>Create a Username</label>
-              <input class="form-control" placeholder="Create Username">
+              <input class="form-control" placeholder="Create Username" name="username" id="userSignup">
             </div>
             <div class="form-group" id="login">
               <label for="exampleInputPassword1">Create a Password</label>
-              <input type="password" class="form-control" placeholder="Password">
+              <input type="password" class="form-control" placeholder="Password" name="password" id="passSignup">
             </div>
             <div class="dropdown-divider" id="login"></div>
-            <button type="submit" class="btn btn-primary" id="CreateAcc-btn">Create Account</button>
+            <button type="submit" class="btn btn-primary" id="createBtn">Create Account</button>
           </form>
         </div>
       </li>

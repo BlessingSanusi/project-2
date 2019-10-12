@@ -6,26 +6,29 @@ var db = require("./models");
 
 var app = express();
 var PORT = process.env.PORT || 3000;
-
+// Middleware
 var passport = require("passport");
 var session = require('express-session');
 var bodyParser = require('body-parser');
-// Middleware
-var session = require('express-session')
-var bodyParser = require('body-parser')
+
 // For Passport
 app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
 app.use(session({ secret: 'recipedb',resave: true, saveUninitialized:true})); // session secret
 app.use(passport.initialize());
+app.use(bodyParser.urlencoded({
+  extended: false
+}))
 app.use(passport.session()); // persistent login sessions
-// var env = require("dotenv");
-// env.load(); getting an error about env.load();
 // Handlebars
 app.set("views", "./views");
 app.engine(
   "handlebars",
   exphbs({
-    // defaultLayout: "main"
+    defaultLayout: "main"
   })
 );
 app.set("view engine", "handlebars");
@@ -55,7 +58,7 @@ db.sequelize.sync(syncOptions).then(function () {
       PORT
     );
   });
-}).catch(function(err){
+}).catch(function (err) {
   console.log(err, "Something went wrong with the database update!");
 });
 
