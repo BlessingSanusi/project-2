@@ -9,7 +9,6 @@ $("#loginSubmit").on("click", function (event) {
       console.log(userCheck);
     });
   }
-  
 });
 
 $("#createBtn").on("click", function(event){
@@ -28,3 +27,9 @@ $("#createBtn").on("click", function(event){
     });
   }
 });
+
+$("#logoutBtn").on("click", function(event){
+  $.get("/api/logout", {}).then(function(){
+    console.log("logout");
+  })
+})

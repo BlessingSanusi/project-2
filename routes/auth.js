@@ -24,10 +24,6 @@ module.exports = function(app, passport){
         successRedirect: "/",
         failureRedirect: "/"
     }));
-      app.post("/api/login", function(req, res){
-        var userCheck = req.params;
-        console.log(userCheck);
-      });
       function isLoggedIn(req, res, next){
           if(req.isAuthenticated()) return next();
           res.redirect("/");

@@ -49,7 +49,9 @@ module.exports = function (app) {
 
   // Create a new post
   app.post("/api/post", function (req, res) {
-    db.Post.create(req.body).then(function (dbPost) {
+    console.log(req.body);
+    db.Post.create(req.body)
+    .then(function (dbPost) {
       res.json(dbPost);
     });
   });
