@@ -23,14 +23,12 @@ app.use(bodyParser.urlencoded({
   extended: false
 }))
 app.use(passport.session()); // persistent login sessions
-// var env = require("dotenv");
-// env.load(); getting an error about env.load();
 // Handlebars
 app.set("views", "./views");
 app.engine(
   "handlebars",
   exphbs({
-    // defaultLayout: "main"
+    defaultLayout: "main"
   })
 );
 app.set("view engine", "handlebars");

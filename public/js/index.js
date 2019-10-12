@@ -21,6 +21,8 @@ $("#createBtn").on("click", function(event){
     joinDate: utc,
   };
   if((newU.username) && (newU.password)){
+    $("#userSignup").val().trim("");
+    $("#passSignup").val().trim("");
     $.post("/api/signup", newU).then(function(){
      console.log(newU);
     });

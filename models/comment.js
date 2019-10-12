@@ -5,16 +5,6 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
       len: [1]
     },
-    createdAt: {
-      type: DataTypes.DATE,
-      defaultValue: sequelize.literal("CURRENT_TIMESTAMP")
-    },
-    updatedAt: {
-      type: DataTypes.DATE,
-      defaultValue: sequelize.literal(
-        "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"
-      )
-    }
   });
 
   Comment.associate = function (models) {

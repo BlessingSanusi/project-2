@@ -3,16 +3,6 @@ module.exports = function (sequelize, DataTypes) {
     username: DataTypes.STRING,
     password: DataTypes.STRING,
     joinDate: DataTypes.DATE,
-    createdAt: {
-      type: DataTypes.DATE,
-      defaultValue: sequelize.literal("CURRENT_TIMESTAMP")
-    },
-    updatedAt: {
-      type: DataTypes.DATE,
-      defaultValue: sequelize.literal(
-        "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"
-      )
-    }
   });
   User.associate = function (models) {
     // Associating Author with Posts
