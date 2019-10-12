@@ -7,7 +7,7 @@ module.exports = function(passport, user){
         done(null, user.id);
     });
     passport.deserializeUser(function(id, done){
-        User.findById(id).then(function(user){
+        User.findByPk(id).then(function(user){
             if(user){
                 done(null, user.get());
             } else{
@@ -42,9 +42,7 @@ module.exports = function(passport, user){
                         password: userPassword,
                         joinDate: utc,
                     };
-                    console.log(data);
                     User.create(data).then(function(newUser){
-                        console.log(newUser);
                         if(!newUser){
                             console.log("signup failed");
                             return done(null, false);
@@ -64,7 +62,7 @@ module.exports = function(passport, user){
             passwordField: "password",
             passReqToCallback: true
         },
-        function(req, email, password, done){
+        function(req, username, password, done){
             var User = user;
             var isValidPassword = function(userpass, password){
                 return bCrypt.compareSync(password, userpass);
@@ -85,6 +83,7 @@ module.exports = function(passport, user){
                     });
                 }
                 var userinfo = user.get();
+                console.log("login success");
                 return done(null, userinfo);
             }).catch(function(err){
                 console.log("Error: ", err);

@@ -4,12 +4,12 @@ module.exports = function (sequelize, DataTypes) {
         postDescription: DataTypes.STRING
     });
 
-    Category.associate = function (models) {
+    // Category.associate = function (models) {
 
-        Category.hasMany(models.Post, {
-            onDelete: "cascade"
-        });
-    };
+    //     Category.hasMany(models.Post, {
+    //         onDelete: "cascade"
+    //     });
+    // };
 
     return Category;
 };
