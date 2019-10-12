@@ -31,6 +31,16 @@ module.exports = function (app) {
     // res.render("../views/index.handlebars");
   });
 
+  // Load Page that shows Category 4
+  app.get("/category4", function (req, res) {
+    res.render("../views/category4.handlebars");
+  });
+
+  // Load Page that shows Category 5
+  app.get("/category5", function (req, res) {
+    res.render("../views/category5.handlebars");
+  });
+
   app.get("/post", function (req, res) {
     res.render("../views/post.handlebars");
   });
